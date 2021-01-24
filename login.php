@@ -4,14 +4,14 @@ include('conexao.php');
 
 
     if(empty($_POST['user']) || empty($_POST['pass'])) {
-        header('Location: index.html');
+        header('Location: index.php');
         exit();
     }
 
     $user = mysqli_real_escape_string($conexao, $_POST['user']);
-    $senha = mysqli_real_escape_string($conexao, $_POST['pass']);
+    $pass = mysqli_real_escape_string($conexao, $_POST['pass']);
 
-    $query = "SELECT pass from login where user = '{$user}'";
+    $query = "SELECT user from login where user = '{$user}' and pass = '{$pass}'";
 
     $result = mysqli_query($conexao, $query);
 
@@ -22,7 +22,8 @@ include('conexao.php');
         header('Location: AreaGerenciamento.php');
         exit();
     } else {
-        header('Location: index.html');
+        $_SESSION['no_autenticated'] = true;
+        header('Location: index.php');
         exit();
     }
 
