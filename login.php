@@ -28,5 +28,5 @@ include('conexao.php');
     }
 
     echo $row;exit;
-
 ?>
+ 
