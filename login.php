@@ -22,11 +22,13 @@ include('conexao.php');
         header('Location: AreaGerenciamento.php');
         exit();
     } else {
+        
         $_SESSION['no_autenticated'] = true;
         header('Location: index.php');
         exit();
     }
 
     echo $row;exit;
+    
 ?>
  
