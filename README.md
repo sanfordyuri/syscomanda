@@ -1,5 +1,5 @@
 # syscomanda
-Projeto de Comanda convertido
+A project of controls electronics. 
 
 ## Tarefas
-Acompanhamento do Progresso através do GitHub
+Monitoring Progress through GitHub
